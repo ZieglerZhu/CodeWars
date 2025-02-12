@@ -1,7 +1,5 @@
 package kyu6.Stop_gninnipS_My_sdroW;
 
-import java.util.Stack;
-
 public class SpinWords {
     public String spinWords(String sentence) {
         StringBuilder result = new StringBuilder();
@@ -10,16 +8,10 @@ public class SpinWords {
             if (singleWord == null) {
                 continue;
             }
-            else if (singleWord.length() < 5) {
-                result.append(singleWord).append(" ");
-                continue;
+            if (singleWord.length() >= 5) {
+                singleWord = new StringBuilder(singleWord).reverse().toString();
             }
-            char[] letters = singleWord.toCharArray();
-            for (int i = letters.length - 1; i >= 0; i--) {
-                result.append(letters[i]);
-            }
-            result.append(" ");
-
+            result.append(singleWord).append(" ");
         }
         return result.toString().trim();
     }
