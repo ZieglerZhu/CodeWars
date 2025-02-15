@@ -2,7 +2,7 @@ package kyu6.Split_Strings;
 
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class StringSplitTest {
     @Test
